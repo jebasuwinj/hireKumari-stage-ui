@@ -1,0 +1,84 @@
+/* Hero */
+.legal-hero.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 100px;
+  background:
+    linear-gradient(100deg, rgba(6, 10, 20, 0.85) 0%, rgba(6, 10, 20, 0.6) 45%, rgba(6, 10, 20, 0.3) 75%, rgba(6, 10, 20, 0.08) 100%),
+    linear-gradient(0deg, rgba(6, 10, 20, 0.55) 0%, rgba(6, 10, 20, 0) 40%),
+    url('../assets/kkImage.jpg') center 55% / cover no-repeat;
+}
+
+.legal-hero__inner {
+  position: relative;
+}
+
+.legal-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  backdrop-filter: blur(3px);
+}
+
+.legal-hero.page-hero h1 span {
+  color: #a9d4f5;
+}
+
+.legal-updated {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 28px;
+  font-style: italic;
+}
+
+.legal-section {
+  margin-bottom: 26px;
+}
+
+.legal-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+
+.legal-section p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  margin-bottom: 10px;
+}
+
+.legal-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.legal-section li {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  padding-left: 16px;
+  position: relative;
+}
+
+.legal-section li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}

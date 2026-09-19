@@ -1,0 +1,134 @@
+.search-jobs {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  background: #fff;
+  padding: 10px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  flex-wrap: wrap;
+}
+
+.search-jobs__field {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  padding: 0 18px;
+  background: transparent;
+  position: relative;
+}
+
+.search-jobs__field:not(.search-jobs__field--keyword)::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  bottom: 10px;
+  width: 1px;
+  background: var(--color-border);
+}
+
+.search-jobs__field .ant-input-affix-wrapper,
+.search-jobs__field .ant-input-affix-wrapper:focus,
+.search-jobs__field .ant-input-affix-wrapper-focused,
+.search-jobs__field .ant-select-selector,
+.search-jobs__field .ant-select-focused .ant-select-selector,
+.search-jobs__field .ant-select-open .ant-select-selector {
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.search-jobs__field input:focus-visible {
+  outline: none !important;
+}
+
+.search-jobs__field--keyword {
+  flex: 1.4;
+  min-width: 220px;
+}
+
+.search-jobs__field:not(.search-jobs__field--keyword) {
+  flex: 1;
+  min-width: 150px;
+}
+
+.search-jobs__icon {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.search-jobs__field .ant-input-affix-wrapper,
+.search-jobs__field .ant-select {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-jobs__field .ant-input-affix-wrapper {
+  padding: 12px 0;
+  background: transparent;
+}
+
+.search-jobs__field .ant-input {
+  background: transparent;
+  font-size: 0.92rem;
+  color: var(--color-text);
+  font-family: inherit;
+}
+
+.search-jobs__field .ant-select-selector {
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.search-jobs__field .ant-select-selection-item,
+.search-jobs__field .ant-select-selection-placeholder {
+  font-size: 0.92rem;
+  color: var(--color-text);
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.search-jobs__select--placeholder .ant-select-selection-item {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.search-jobs__submit {
+  flex-shrink: 0;
+  padding: 0 22px;
+}
+
+.search-jobs--compact {
+  box-shadow: none;
+  border: 1px solid var(--color-border);
+  padding: 8px;
+}
+
+@media (max-width: 760px) {
+  .search-jobs__field,
+  .search-jobs__field--keyword,
+  .search-jobs__field:not(.search-jobs__field--keyword) {
+    min-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .search-jobs__field:not(.search-jobs__field--keyword) {
+    padding: 10px 4px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .search-jobs__field:not(.search-jobs__field--keyword)::before {
+    display: none;
+  }
+
+  .search-jobs__field .ant-select {
+    width: 100%;
+  }
+
+  .search-jobs__submit {
+    width: 100%;
+  }
+}

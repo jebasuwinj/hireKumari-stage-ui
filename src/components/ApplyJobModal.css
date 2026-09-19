@@ -1,0 +1,79 @@
+.apply-job-modal__subtitle {
+  color: var(--color-text-muted);
+  font-size: 0.88rem;
+  margin-bottom: 20px;
+}
+
+.apply-job-modal__subtitle strong {
+  color: var(--color-text);
+}
+
+.apply-job-field {
+  margin-bottom: 16px;
+}
+
+.apply-job-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.apply-job-field .ant-input,
+.apply-job-field .ant-input-affix-wrapper {
+  width: 100%;
+}
+
+.apply-job-modal__dragger.ant-upload-drag {
+  background: var(--color-bg-soft);
+  border-radius: var(--radius-md);
+  border: 1.5px dashed var(--color-border);
+  padding: 12px 0;
+}
+
+.apply-job-modal__dragger .ant-upload-drag-icon {
+  color: var(--color-primary);
+  font-size: 1.8rem;
+}
+
+.apply-job-modal__dragger .ant-upload-text {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.apply-job-modal__dragger .ant-upload-hint {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.apply-job-modal__success {
+  text-align: center;
+  padding: 12px 8px;
+}
+
+.apply-job-modal__success > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5fa8f0, var(--color-primary));
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 18px;
+  box-shadow: 0 8px 20px rgba(4, 84, 194, 0.35);
+}
+
+.apply-job-modal__success h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.apply-job-modal__success p {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 22px;
+}

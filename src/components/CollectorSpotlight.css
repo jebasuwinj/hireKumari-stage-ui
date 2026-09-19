@@ -1,0 +1,83 @@
+.collector-spotlight__inner {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.collector-spotlight__figure {
+  flex: 0 0 auto;
+  width: 42%;
+  max-width: 420px;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  /* Solid fill under the image so rounded-corner AA never shows page white. */
+  background: #0b5ac5;
+}
+
+.collector-spotlight__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.collector-spotlight__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.collector-spotlight__content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+
+.collector-spotlight__content h2 span {
+  color: var(--color-primary);
+}
+
+.collector-spotlight__quote {
+  margin: 0 0 24px;
+  padding: 0;
+  border: none;
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.collector-spotlight__attribution {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.collector-spotlight__attribution strong {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.collector-spotlight__attribution span {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .collector-spotlight__inner {
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+
+  .collector-spotlight__figure {
+    width: 220px;
+    max-width: 70%;
+  }
+
+  .collector-spotlight__content h2 {
+    font-size: 1.6rem;
+  }
+}

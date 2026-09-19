@@ -1,0 +1,209 @@
+.admin-profile__layout {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.admin-profile__layout .admin-post-job__card {
+  max-width: none;
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 960px) {
+  .admin-profile__layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.admin-profile__side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 0;
+}
+
+.admin-profile__overview h2,
+.admin-profile__tip h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 16px;
+}
+
+.admin-profile__overview-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+.admin-profile__overview-row:first-of-type {
+  border-top: none;
+}
+
+.admin-profile__overview-row strong {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+}
+
+.admin-profile__tip {
+  background: var(--color-primary-light);
+  border: none;
+}
+
+.admin-profile__tip p {
+  font-size: 0.86rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
+
+.admin-profile__badge {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-border);
+  box-sizing: border-box;
+}
+
+.admin-profile__badge-main {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  flex: 1;
+}
+
+.admin-profile__badge-text {
+  min-width: 0;
+}
+
+.admin-profile__badge-text strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.admin-profile__badge-text small {
+  font-size: 0.8rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.admin-profile__badge-main > span {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--color-primary-light), #fff);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+  border: 1px solid var(--color-primary-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-profile__logo-upload.ant-upload-wrapper {
+  flex: 0 0 auto;
+  max-width: 100%;
+}
+
+.admin-profile__logo-upload .ant-upload {
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.admin-profile__logo-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  margin: 0;
+  padding: 7px 14px 7px 7px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-bg-soft);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-profile__logo-btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+  font-size: 0.95rem;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-profile__logo-btn-label {
+  padding-right: 4px;
+  white-space: nowrap;
+}
+
+.admin-profile__logo-btn:hover:not(:disabled) {
+  background: var(--color-primary-light);
+  border-color: #b7cff0;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-profile__logo-btn:hover:not(:disabled) .admin-profile__logo-btn-icon {
+  border-color: #b7cff0;
+  color: var(--color-primary-dark);
+}
+
+.admin-profile__logo-btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.admin-profile__logo-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+@media (max-width: 520px) {
+  .admin-profile__logo-btn-label {
+    display: none;
+  }
+
+  .admin-profile__logo-btn {
+    padding: 6px;
+  }
+}
+
+.admin-profile__saved {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}

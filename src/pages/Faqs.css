@@ -1,0 +1,96 @@
+/* Hero */
+.faqs-hero.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 100px;
+  background:
+    linear-gradient(100deg, rgba(6, 10, 20, 0.85) 0%, rgba(6, 10, 20, 0.6) 45%, rgba(6, 10, 20, 0.3) 75%, rgba(6, 10, 20, 0.08) 100%),
+    linear-gradient(0deg, rgba(6, 10, 20, 0.55) 0%, rgba(6, 10, 20, 0) 40%),
+    url('../assets/kkImage.jpg') center 55% / cover no-repeat;
+}
+
+.faqs-hero__inner {
+  position: relative;
+}
+
+.faqs-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  backdrop-filter: blur(3px);
+}
+
+.faqs-hero.page-hero h1 span {
+  color: #a9d4f5;
+}
+
+.faqs-group {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px 28px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.faqs-group h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: var(--color-primary);
+}
+
+.faqs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.faqs-item {
+  border-top: 1px solid var(--color-border);
+  padding: 14px 0;
+}
+
+.faqs-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.faqs-item summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--color-text);
+}
+
+.faqs-item p {
+  margin-top: 10px;
+  font-size: 0.87rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.faqs-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px 24px;
+}
+
+.faqs-more p {
+  font-weight: 600;
+  color: var(--color-text);
+}

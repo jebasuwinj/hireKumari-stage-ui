@@ -1,0 +1,113 @@
+.admin-post-job__card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  max-width: 720px;
+  box-shadow: var(--shadow-sm);
+}
+
+.admin-field {
+  margin-bottom: 18px;
+}
+
+.admin-field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.admin-field label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.admin-field .ant-input,
+.admin-field .ant-input-affix-wrapper,
+.admin-field .ant-select {
+  width: 100%;
+}
+
+.admin-field .ant-input,
+.admin-field .ant-input-affix-wrapper {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.admin-post-job__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.admin-post-job__success {
+  max-width: 480px;
+  margin: 40px auto 0;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 48px 32px;
+}
+
+.admin-post-job__success > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5fa8f0, var(--color-primary));
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 18px;
+  box-shadow: 0 8px 20px rgba(4, 84, 194, 0.35);
+}
+
+.admin-post-job__success h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.admin-post-job__success p {
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+.admin-post-job__success-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.admin-post-job__card--modal {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  /* Keep a little inset so input focus shadows aren't clipped by the scrollport. */
+  padding: 4px 6px 8px;
+  max-width: none;
+}
+
+.admin-post-job__success--modal {
+  border: none;
+  padding: 24px 8px 8px;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .admin-field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .admin-post-job__card {
+    padding: 20px;
+  }
+}

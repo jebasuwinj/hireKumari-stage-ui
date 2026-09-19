@@ -1,0 +1,121 @@
+.admin-fairs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.admin-fair-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.admin-fair-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.admin-fair-card__badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.admin-fair-card__date {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.admin-fair-card__date span {
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.admin-fair-card__date strong {
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+}
+
+.admin-fair-card__main {
+  flex: 1;
+  min-width: 220px;
+}
+
+.admin-fair-card__main strong {
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.admin-fair-card__main p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.admin-fair-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.admin-icon-view,
+.admin-icon-edit,
+.admin-icon-delete {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.admin-icon-view:hover {
+  background: #e8f1fb;
+  border-color: #0454c2;
+  transform: translateY(-1px);
+}
+
+.admin-icon-edit:hover {
+  background: #fff4e8;
+  border-color: #e0703e;
+  transform: translateY(-1px);
+}
+
+.admin-icon-delete:hover {
+  background: #fdecee;
+  border-color: #e0435c;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 700px) {
+  .admin-fair-card {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

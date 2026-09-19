@@ -1,0 +1,224 @@
+/* Hero */
+.about-hero.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 100px;
+  background:
+    linear-gradient(100deg, rgba(6, 10, 20, 0.85) 0%, rgba(6, 10, 20, 0.6) 45%, rgba(6, 10, 20, 0.3) 75%, rgba(6, 10, 20, 0.08) 100%),
+    linear-gradient(0deg, rgba(6, 10, 20, 0.55) 0%, rgba(6, 10, 20, 0) 40%),
+    url('../assets/kkImage.jpg') center 55% / cover no-repeat;
+}
+
+.about-hero__inner {
+  position: relative;
+}
+
+.about-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  backdrop-filter: blur(3px);
+}
+
+.about-hero.page-hero h1 span {
+  color: #a9d4f5;
+}
+
+/* Floating stats bar */
+.about-stats-bar {
+  position: relative;
+  z-index: 2;
+  margin-top: -40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 22px;
+}
+
+.about-stats-bar__item {
+  text-align: center;
+  border-right: 1px solid var(--color-border);
+}
+
+.about-stats-bar__item:last-child {
+  border-right: none;
+}
+
+.about-stats-bar__item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.about-stats-bar__item small {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Mission */
+.about-mission {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.section-eyebrow {
+  display: inline-block;
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.about-mission__text h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.about-mission__text p {
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+}
+
+.about-mission__figure {
+  flex-shrink: 0;
+  width: 280px;
+  background: var(--color-primary-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.about-mission__badge {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.about-mission__quote {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-accent);
+  line-height: 1.5;
+}
+
+/* Values */
+.about-values-section {
+  background: var(--color-bg-soft);
+}
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.about-value-card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.about-value-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.about-value-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin-bottom: 14px;
+}
+
+.about-value-card strong {
+  display: block;
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+.about-value-card p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+  .about-stats-bar {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+  }
+
+  .about-stats-bar__item:nth-child(2) {
+    border-right: none;
+  }
+
+  .about-stats-bar__item:nth-child(odd) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  .about-mission {
+    flex-direction: column;
+  }
+
+  .about-mission__figure {
+    width: 100%;
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .about-stats-bar {
+    grid-template-columns: 1fr;
+  }
+
+  .about-stats-bar__item {
+    border-right: none !important;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 12px;
+  }
+
+  .about-stats-bar__item:last-child {
+    border-bottom: none;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+}

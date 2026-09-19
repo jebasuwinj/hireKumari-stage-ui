@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #0454c2;
+  --color-primary-dark: #033f8f;
+  --color-primary-light: #e7f0fc;
+  --color-accent: #062a5c;
+  --color-text: #1b2230;
+  --color-text-muted: #5b6570;
+  --color-border: #e2e6e8;
+  --color-bg: #ffffff;
+  --color-bg-soft: #f5f8fc;
+  --color-danger: #e0435c;
+
+  --font-heading: 'Poppins', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 1px 3px rgba(10, 22, 45, 0.08);
+  --shadow-md: 0 8px 24px rgba(10, 22, 45, 0.1);
+  --shadow-lg: 0 16px 40px rgba(10, 22, 45, 0.14);
+
+  --container-width: 1240px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 56px 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.section-head > div:first-child {
+  min-width: 0;
+}
+
+.section-head h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  border-left: 4px solid var(--color-primary);
+  padding-left: 10px;
+}
+
+.section-head p {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
+
+.section-link {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: gap 0.15s ease, color 0.15s ease;
+}
+
+.section-link:hover {
+  gap: 8px;
+  color: var(--color-primary-dark);
+}
+
+.section-head__actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Mobile: the "View All →" link/actions moves above the title instead of
+   getting squeezed beside it and pushing the page into horizontal scroll. */
+@media (max-width: 640px) {
+  .section-head {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .section-head > .section-link,
+  .section-head > .section-head__actions {
+    align-self: flex-end;
+  }
+
+  .section-head__actions {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid transparent;
+  box-sizing: border-box;
+  font-weight: 600;
+  font-size: 0.92rem;
+  padding: 11px 20px;
+  line-height: 1.2;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:focus-visible,
+a.btn-primary:hover,
+a.btn-primary:focus {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover,
+.btn-outline:focus,
+.btn-outline:focus-visible,
+a.btn-outline:hover,
+a.btn-outline:focus {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.page-hero {
+  background: linear-gradient(120deg, var(--color-primary) 0%, #1463d6 60%, #2f83e6 100%);
+  color: #fff;
+  padding: 48px 0;
+}
+
+.page-hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.page-hero p {
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 640px;
+}
+
+.page-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: var(--color-text-muted);
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .job-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    padding: 40px 0;
+  }
+}
+
+/* Global antd polish — dropdown popups render in a portal at <body>, so these
+   have to be styled globally rather than scoped to individual components. */
+.ant-select-dropdown {
+  padding: 6px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 16px 40px rgba(10, 22, 45, 0.18) !important;
+  border: 1px solid var(--color-border);
+}
+
+.ant-select-dropdown .ant-select-item {
+  border-radius: 8px !important;
+  font-size: 0.9rem !important;
+  padding: 8px 12px !important;
+  min-height: auto;
+}
+
+.ant-select-dropdown .ant-select-item-option-active:not(.ant-select-item-option-selected) {
+  background: var(--color-bg-soft) !important;
+}
+
+.ant-select-dropdown .ant-select-item-option-selected {
+  background: var(--color-primary-light) !important;
+  color: var(--color-primary) !important;
+  font-weight: 600 !important;
+}
+
+.ant-picker-dropdown,
+.ant-dropdown {
+  border-radius: 12px !important;
+  box-shadow: 0 16px 40px rgba(10, 22, 45, 0.18) !important;
+}
+
+/* antd's virtualised dropdown list ships with a plain gray scrollbar thumb —
+   restyle it thin and brand-colored instead of the default OS-looking bar. */
+.rc-virtual-list-scrollbar {
+  width: 6px !important;
+}
+
+.rc-virtual-list-scrollbar-thumb {
+  background: var(--color-border) !important;
+  border-radius: 999px !important;
+}
+
+.ant-select-dropdown .rc-virtual-list-holder::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-select-dropdown .rc-virtual-list-holder::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+.ant-select-dropdown .rc-virtual-list-holder::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* All modals: centered, shorter fixed max height, body scrolls inside. */
+.ant-modal-wrap {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 24px 16px !important;
+}
+
+.ant-modal {
+  top: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0 auto !important;
+  max-width: calc(100vw - 32px);
+  max-height: min(60vh, 520px) !important;
+}
+
+.ant-modal .ant-modal-container,
+.ant-modal .ant-modal-content {
+  display: flex !important;
+  flex-direction: column !important;
+  max-height: min(60vh, 520px) !important;
+  height: auto !important;
+  overflow: hidden !important;
+}
+
+.ant-modal .ant-modal-header {
+  flex-shrink: 0 !important;
+}
+
+.ant-modal .ant-modal-body {
+  flex: 1 1 auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+}
+
+.ant-modal .ant-modal-footer {
+  flex-shrink: 0 !important;
+}
+
+.ant-modal .ant-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.ant-modal .ant-modal-body::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+.ant-modal .ant-modal-body::-webkit-scrollbar-track {
+  background: transparent;
+}

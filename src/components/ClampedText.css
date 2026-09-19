@@ -1,0 +1,20 @@
+.clamped-text__body {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.clamped-text__toggle {
+  margin-top: 2px;
+  padding: 0;
+  background: none;
+  border: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.clamped-text__toggle:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,110 @@
+.admin-applications__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.admin-applications__tabs {
+  display: flex;
+  gap: 8px;
+  background: var(--color-bg-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+.admin-applications__tabs button {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 20px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.admin-applications__tabs button:hover {
+  color: var(--color-text);
+}
+
+.admin-applications__tabs button.is-active {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(4, 84, 194, 0.25);
+}
+
+.admin-applications-table-wrap {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+}
+
+.admin-applications-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+}
+
+.admin-applications-table th {
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg-soft);
+}
+
+.admin-applications-table td {
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.88rem;
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.admin-applications-table tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-applications-table tr:hover td {
+  background: var(--color-bg-soft);
+}
+
+.admin-applications-table__candidate {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-applications-table__candidate strong {
+  display: block;
+  font-size: 0.9rem;
+}
+
+.admin-applications-table__candidate small {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.admin-applications-table__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .admin-applications__toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

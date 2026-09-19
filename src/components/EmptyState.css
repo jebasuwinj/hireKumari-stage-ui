@@ -1,0 +1,40 @@
+.empty-state--panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 56px 24px;
+  background: var(--color-bg-soft, #f5f8fc);
+  border: 1px dashed var(--color-border, #e2e6e8);
+  border-radius: var(--radius-lg, 20px);
+}
+
+.empty-state__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  border-radius: 50%;
+  background: var(--color-primary-light, #e7f0fc);
+  margin-bottom: 12px;
+}
+
+.empty-state__title {
+  font-family: var(--font-heading, inherit);
+  font-size: 1.05rem;
+  color: var(--color-text, #1b2230);
+  margin: 0 0 4px;
+}
+
+.empty-state__desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted, #5b6570);
+  max-width: 380px;
+  line-height: 1.5;
+}
+
+.empty-state__action {
+  margin-top: 18px;
+}

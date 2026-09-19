@@ -1,0 +1,38 @@
+.structured-text {
+  color: var(--color-text);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.structured-text__p {
+  margin: 0 0 0.55em;
+  overflow-wrap: anywhere;
+}
+
+.structured-text__p:last-child {
+  margin-bottom: 0;
+}
+
+.structured-text__p strong {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.structured-text__list {
+  margin: 0.35em 0 0.75em;
+  padding-left: 1.25em;
+  list-style: disc;
+}
+
+.structured-text__list li {
+  margin: 0.28em 0;
+  overflow-wrap: anywhere;
+}
+
+.structured-text__list li strong {
+  font-weight: 700;
+}
+
+.structured-text__spacer {
+  height: 0.55em;
+}

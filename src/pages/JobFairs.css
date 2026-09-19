@@ -1,0 +1,270 @@
+/* Hero */
+.job-fairs-hero.page-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 72px 0 100px;
+  background:
+    linear-gradient(100deg, rgba(6, 10, 20, 0.85) 0%, rgba(6, 10, 20, 0.6) 45%, rgba(6, 10, 20, 0.3) 75%, rgba(6, 10, 20, 0.08) 100%),
+    linear-gradient(0deg, rgba(6, 10, 20, 0.55) 0%, rgba(6, 10, 20, 0) 40%),
+    url('../assets/kkImage.jpg') center 55% / cover no-repeat;
+}
+
+.job-fairs-hero__inner {
+  position: relative;
+}
+
+.job-fairs-hero__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  backdrop-filter: blur(3px);
+}
+
+.job-fairs-hero.page-hero h1 span {
+  color: #a9d4f5;
+}
+
+/* Floating stats bar */
+.job-fairs-stats-bar {
+  position: relative;
+  z-index: 2;
+  margin-top: -40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.job-fairs-stats-bar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  box-shadow: var(--shadow-lg);
+}
+
+.job-fairs-stats-bar__item > span:first-child {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.job-fairs-stats-bar__item > span:last-child {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.job-fairs-stats-bar__item strong {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.job-fairs-stats-bar__item small {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+/* Event list */
+.fairs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.fairs-list__item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.fairs-list__item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.fairs-list__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.fairs-list__date {
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.fairs-list__date span {
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.fairs-list__date strong {
+  font-size: 1.35rem;
+  font-family: var(--font-heading);
+}
+
+.fairs-list__body {
+  flex: 1;
+  min-width: 200px;
+}
+
+.fairs-list__body h3 {
+  font-size: 1.05rem;
+  margin-bottom: 6px;
+}
+
+.fairs-list__body p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.fairs-list__actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Subscribe banner */
+.job-fairs-subscribe {
+  padding-top: 8px;
+}
+
+.job-fairs-subscribe__card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  background: linear-gradient(100deg, var(--color-accent), var(--color-primary) 70%);
+  border-radius: var(--radius-lg);
+  padding: 32px 36px;
+  color: #fff;
+}
+
+.job-fairs-subscribe__text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 280px;
+}
+
+.job-fairs-subscribe__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.job-fairs-subscribe__text h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.job-fairs-subscribe__text p {
+  margin-top: 4px;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 380px;
+}
+
+.job-fairs-subscribe__form {
+  display: flex;
+  gap: 10px;
+  flex: 1;
+  max-width: 420px;
+  min-width: 260px;
+}
+
+.job-fairs-subscribe__form .ant-input-affix-wrapper {
+  border-radius: 999px;
+  padding: 10px 18px;
+}
+
+.job-fairs-subscribe__form .btn {
+  border-radius: 999px;
+  background: #062a5c;
+  flex-shrink: 0;
+}
+
+.job-fairs-subscribe__form .btn:hover {
+  background: #041d40;
+}
+
+.job-fairs-subscribe__success {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .job-fairs-stats-bar {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .job-fairs-subscribe__card {
+    padding: 26px;
+  }
+
+  .job-fairs-subscribe__form {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .fairs-list__item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .fairs-list__actions {
+    width: 100%;
+  }
+
+  .fairs-list__actions .btn {
+    flex: 1;
+  }
+}

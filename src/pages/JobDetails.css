@@ -1,0 +1,139 @@
+.job-details-hero__inner {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.job-details-hero__logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.job-details-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.job-details-card {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.job-details-card h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.job-details-card p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: 0.92rem;
+}
+
+/* Preserve line breaks / blank lines from the admin textarea. */
+.job-details-description {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  color: var(--color-text-muted);
+  line-height: 1.65;
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.job-details-facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.job-details-facts li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.job-details-facts span {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.job-details-facts strong {
+  font-size: 0.95rem;
+}
+
+.job-details-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.job-details-list li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.job-details-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+}
+
+.job-details-side {
+  position: sticky;
+  top: 90px;
+}
+
+.job-details-apply,
+.job-details-company {
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.job-details-apply h3,
+.job-details-company h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.job-details-apply p,
+.job-details-company p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.job-details-apply .btn {
+  margin-bottom: 10px;
+}
+
+.job-details-related {
+  margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+  .job-details-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .job-details-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
