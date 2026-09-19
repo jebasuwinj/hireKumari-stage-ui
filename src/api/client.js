@@ -3,7 +3,7 @@
 // ApiError (with `.code`, `.status`, `.details`) on failure, matching the
 // API's { success, data, message, meta } / { success:false, message, code } envelope.
 
-const BASE_URL = (import.meta.env.VITE_API_URL || 'http://localhost:5000/api/v1').replace(/\/+$/, '')
+const BASE_URL = (import.meta.env.VITE_API_URL || 'https://hirekumari-stage-api.onrender.com/api/v1').replace(/\/+$/, '')
 const TOKEN_KEY = 'kkjp_token'
 
 export class ApiError extends Error {
